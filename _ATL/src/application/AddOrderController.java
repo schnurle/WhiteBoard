@@ -24,7 +24,7 @@ public class AddOrderController implements Initializable{
     private TextField addAmount;
 
     @FXML
-    private PasswordField addItem;
+    private TextField addItem;
 
     @FXML
     private Button addToList;
@@ -33,8 +33,12 @@ public class AddOrderController implements Initializable{
     private ChoiceBox<CustomerList> chooseCustomer;
     
     private OrderList orderList = new OrderList();
+
+	private WhiteBoardModel model = new WhiteBoardModel();
+   
     @FXML
     void handleAddToList(ActionEvent event) {
+    	try {
     	String v1 = addAmount.getText();
     	String v2 = addItem.getText();
     	//String v3 = chooseCustomer.getText();
@@ -42,7 +46,18 @@ public class AddOrderController implements Initializable{
     	String value2 = String.valueOf(v2);
     	//String value3 = String.valueOf(v3);
     	this.orderList.addOrder(value2, value1);
+    	
+    	}catch(Exception e) {
+			e.printStackTrace();
+    	}
     }
+   
+    public void setOrderList(OrderList orderList) {
+		this.model.setOrderList(orderList);
+		orderList.setOrder(this.model.getOrderEntries()); // Items auf ObservableList setzen
+	}
+
+    	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub

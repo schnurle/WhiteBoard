@@ -2,6 +2,8 @@ package Logic;
 
 import java.util.ArrayList;
 
+import javafx.collections.ObservableList;
+
 public class OrderList {
 	
 	private ArrayList<Order> orderEntries = new ArrayList<Order>();
@@ -13,6 +15,11 @@ public class OrderList {
 
 	public ArrayList<Order> getOrder() {
 		return orderEntries;
+	}
+
+	public void setOrder(ObservableList<Order> orderEntries) {
+		return;
+		
 	}
 
 	

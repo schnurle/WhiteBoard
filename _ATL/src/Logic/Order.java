@@ -32,10 +32,7 @@ public class Order {
 
 
 
-		public String getCustomerName() {
-			// TODO Auto-generated method stub
-			return null;
-		}
+		
 		
 		
 		

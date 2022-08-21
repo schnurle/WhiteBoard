@@ -17,13 +17,13 @@
                   <Font size="24.0" />
                </font>
             </Label>
+            <TextField fx:id="addItem" layoutX="15.0" layoutY="181.0" />
             <TextField fx:id="addAmount" layoutX="15.0" layoutY="259.0" />
             <ChoiceBox fx:id="chooseCustomer" layoutX="14.0" layoutY="111.0" prefWidth="150.0" />
             <Label layoutX="23.0" layoutY="83.0" text="Choose Customer" />
             <Label layoutX="22.0" layoutY="149.0" text="Insert orderd item" />
             <Label layoutX="23.0" layoutY="223.0" text="Insert the amount of the item" />
             <Button fx:id="addToList" layoutX="41.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleAddToList" prefHeight="25.0" prefWidth="97.0" text="Add to list" />
-            <TextField fx:id="addItem" layoutX="15.0" layoutY="181.0" />
          </children>
       </AnchorPane>
    </center>

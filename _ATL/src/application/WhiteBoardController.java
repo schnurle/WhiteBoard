@@ -44,23 +44,25 @@ public class WhiteBoardController implements Initializable {
     @FXML
     void handleAddOrderButton(ActionEvent event) {
     	try {
-    		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/AddOrder.fxml"));
-    		Parent root1 = (Parent) fxmlLoader.load();
+    		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddOrder.fxml"));
+    		Parent root = fxmlLoader.load();
     		Stage stage = new Stage();
-    		stage.setScene(new Scene(root1));  
+    		stage.setScene(new Scene(root));  
     		stage.show();
     	} catch(Exception e) {
 			e.printStackTrace();
 
     	}
+    	
 
+    	
     }
 
-	@Override
+    @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		amount.setCellValueFactory(data -> new SimpleObjectProperty<Integer>(data.getValue().getAmount()));
-		customerNR.setCellValueFactory(data -> new SimpleObjectProperty<Integer>(data.getValue().getAmount()));
-		customerName.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getCustomerName()));
+		//customerNR.setCellValueFactory(data -> new SimpleObjectProperty<Integer>(data.getValue().getCustomerNR()));
+		//customerName.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getCustomerName()));
 		item.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getItem()));
 
 	}
