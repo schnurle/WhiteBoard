@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WhiteBoardController">
+   <center>
+		<Pane prefHeight="567.0" prefWidth="937.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="OrderList" layoutX="14.0" layoutY="70.0" prefHeight="477.0" prefWidth="911.0">
+              <columns>
+                <TableColumn fx:id="customerNR" prefWidth="92.0" text="CustomerNR" />
+                <TableColumn fx:id="customerName" prefWidth="247.0" text="Customer" />
+                  <TableColumn fx:id="item" minWidth="0.0" prefWidth="456.0" text="Item" />
+                  <TableColumn fx:id="amount" prefWidth="115.0" text="Amount" />
+              </columns>
+            </TableView>
+            <Button fx:id="AddOrderButton" layoutX="799.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleAddOrderButton" prefHeight="25.0" prefWidth="124.0" text="Add Order" />
+            <Label layoutX="34.0" layoutY="13.0" text="Order List">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </center>
+</BorderPane>
